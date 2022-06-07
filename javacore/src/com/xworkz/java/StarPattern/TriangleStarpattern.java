@@ -12,9 +12,7 @@ public class TriangleStarpattern {
 		for(int k=1; k<=i; k++){
 		System.out.print(" *");
 		}
-		for(int l=4; l>=i; l--){
-		System.out.print(" ");
-		}
+	
 		System.out.println();
 		}
 
