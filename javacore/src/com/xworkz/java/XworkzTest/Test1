@@ -1,0 +1,207 @@
+1). Java not a pure object oriented language
+     *because we use premitive data types. in java everything interms of object.
+
+
+2). In c / c++ memory allocation and address directed by using the pointers(Explictly), but in java memory allocation is done implicity.
+	most complex and confusing features in java.
+
+
+5). Can the main method be Overloaded?
+	yes
+
+6). Why is the main method static in Java?
+	Because all  fucntions, varibale using static keywords defind in the classes are loads first, while the class loading and JVM looks for the main method for excution the program.  So main method is static in Java
+	
+
+
+7). Difference between static methods, static variables, and static classes in java.
+
+		static methods:-*These methods are declared using static keywords.
+						*These methods are loads at the time of class loading.
+						*these statements and variables inside the static method will destory after excution of that method.
+				
+						
+				
+	   Static variable:-*These variables are declared outside the method and inside the class using static keywords.
+						*these variables will destory after excution of the class.
+						*These varibles are loads at the time of class loading.
+						
+				
+		Static classes:- *These classes are declared using static keywords.
+						*These classes are loads at the time of class loading.
+	
+
+
+9). What are the Memory Allocations available in Java?
+
+		 class memory area:- used for class methods or .class files loaded here.
+		 Heap memory:- used for dynamic / runtime or instance variables stored here.
+		 Stack memory or method area:- used for local variables, memory will be destoryed once completeing / execution of the methods.
+		 PC register 
+		 
+		 
+
+10). Differentiate between instance and local variables.
+
+
+			Instance:
+				1.these variables are declared inside the class and outside the main method.
+				2.As name say these variables are instance specific and which is not shared among the all instance.
+				3.these variables acts as global , available throgh the class.
+			
+			
+			Local:
+				1.these variables are declared outside the class and inside the main method.
+				2.these variables destoryed once completeing the methods excution.
+				3.these are available only inside specific methods, cant access outside of it.
+
+
+
+
+11). What happens when the main() isn't declared as static?
+
+			which not loads, when time of the class loading.
+
+
+
+12). What is JDK? Mention the variants of JDK?
+			Java development Kit, which includes JVM(java virtual machine), JRE(Java runtime environment)
+			which is different for the difference OS(Linux, Windows and Mac).
+			which includes javac, rt files, ext files, java utilities files , java io fies.compilers
+
+
+13).difference between JDK, JRE, and JVM?
+   jdk:-to develop and executing the program.
+   jre:-ony run the program.
+   jvm:-it is responsible to check the main and execute.
+
+
+
+
+
+14). Can "this" and "super" keywords be used together?
+
+	No.
+
+			
+18). What is Encapsulation? Explain how to achieve Polymorphism in java with on Example program /// not completed.
+		
+
+
+16).polymorphism:- The ability of the method to behave differently when different object acting upon it.
+      There are 2 types in polymorphism
+	  a) compile time polymorphism:- out of so many overloaded methods which method is implementation should be executing is decided by compiler at the compile time.
+	  b) run time polymorphism:-out of so many overridden methods which method is implementation should be executing is decided by jvm at the run time.
+
+
+
+
+17).Abstraction:- Abstraction is a hiding the implements details and showing the functionality to the user.
+            ex:- sending sms, we can write text and sending but we dont knowm the internal proccess of the message delivery.
+          There are two types in abstraction a)abstract class  b)Interface
+
+
+
+19).Difference of abstract class and interfaces
+       abstract class:-  a class is declared with abstract keyword is called abstract class.
+        * abstract class can have abstract method and concrete mathod 
+		* in  abstract method is without body
+		* it can't create object
+       interface:- is declared as interface keyword.
+	   * interface have only abstract methods.
+	   * interfaces supports multiple and hybrid inheritance.
+	   * interface are is a relationship.
+
+
+
+
+20)_method overloading :- In class having multiple methods and different in arguments is known as method overloading.
+        rules:- There should be change in no of arguments.
+		        There should be change in datatypes of  arguments.
+				There should be change in order/sequence in arguments.
+				
+
+
+21) method overrriding :- subclass has same method as declared in the super class is known as method overriding.
+				  
+
+22) No, we can't override the static method in java.
+
+23)	  rules for method overriding:- *The must have same method as declared in the parent calss.
+		                            *The must have same arguments as declared in the parent calss.			  
+				                    *There must be is a relationship.
+									
+24)it is strong relationship where object can't live without indepentdent each other.
+    it is also known as has-a relationship.
+   ex:- car has-a relationship
+
+27) Constructor :- it is set of instructions / block of codes initialization and instantiation.
+           rules;  *There should be change in no of arguments.
+		           *There should be change in datatypes of  arguments.
+				   *There should be change in order/sequence in arguments.
+   
+28)Different types of constructor :   a) default constructor   b) parameterised constructor
+
+               a) default:- in default constructor doesn't have arguments is called default constructor.
+               b) parameterised:- in parameterised constructor having specified no of arguments is called parameterised constructor.
+
+29) inheritance :- it is a mechanism in which one object is aquires  all the properties and behavior of an another object is called inheritance.
+     there 5 types of inheritance
+      a) single inheritance: when a class inheritce the properties of another class.
+             ex:- Bird-Peacock
+			 class class Bird {
+	             void birdfly() {
+		        System.out.println("Bird is flying");
+	            }}
+              class Peacock extends Bird {
+	              void peacockDance() {
+		       System.out.println("Peacock is dancing");
+	          }}
+			   class MultilevelofBird {
+
+	          public static void main(String[] args) {
+		
+		       Babypeacock b = new Babypeacock();
+		       b.Babypeacockplaying();
+		       b.peacockDance();
+		    }}
+
+       b) multilevel inheritance:- The subclass inheriting properties from superclass and that superclass inheritang another super class.
+             ex:- Animal-Tiger-babytiger.
+                        
+			 class class Animal {
+	             void animals() {
+		        System.out.println(" Animals");
+	            }}
+              class Tiger extends Animal {
+	              void tigerDance() {
+		       System.out.println("National animal");
+	          }}			 
+                 class babyTiger extends Tiger {
+	              void babytigerDance() {
+		       System.out.println("National animals");
+	          }}			 
+                		   
+		c)hierarchical inheritance:- superclass inheritace the two or more subclasses is called hierarchical inheritance.
+                 ex;- 	
+                            class Movie {
+	                             void movietime() {
+	                     	System.out.println("We are going to watch movie");
+	                         }}
+
+                            class Kgf2 extends Movie{
+	                             void kgf2hit(){
+		                    System.out.println("Kgf2 is hit blockbuster in worldwide");
+	                         }}
+                                 class Vikrantrona extends Movie{
+	                          void vikrantronarelease() {
+		                    System.out.println("Vikrantrona will be release worldwide");
+							}}
+							
+		d) multiple inheritace:- two or more superclass inheritce the subclass is called multiple inheritace.					
+						java doesn't support multiple inheritace of the classes.
+
+        e) hybrid inheritance:- it is different combination in inheritace.
+                     java doen't support hybrid inheritance	 of the classes.	
+							
+							
