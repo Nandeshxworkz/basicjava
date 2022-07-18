@@ -1,0 +1,213 @@
+1) The varrags allows the method to accept zero or muliple arguments. Before varargs either we use overloaded method or take an 
+   array as the method parameter but it was not considered good because it leads to the maintenance problem. If we don't know how many 
+   argument we will have to pass in the method, varargs is the better approach.
+
+2) The elements that begin on a new line are known as block elements. A block element acquires up the full width available for that content.
+   Unlike inline, there exists a top and bottom margin for these elements. Block-level elements may only appear inside the body tag.
+   Block-level elements create a larger structure than inline elements.
+
+  Types of blocks::=
+
+      Static Blocks : 
+	*SIB-Static Initializtion Block
+	*Static blocks are the set of statements used to initialize static variable.
+	*Syntax :Static
+				{
+					
+					}
+	*we can have multiple stack block and  execution will happen in a sequential.
+	*Static blocks executed before main() 
+
+     Non-Static Blocks :
+	*IIB-Instance intialization block.
+	*Non-Static blocks are the set of statements used to initialize static variable and Non-Static variable.
+	*Non-Static blocks executed during object creation.
+
+3) hashCode() Method. The hashCode() is a method of Java Integer Class which determines the hash code for a given Integer. 
+   It overrides hashCode in class Object. By default, this method returns a random integer that is unique for each instance.
+
+4)*Security. Java applications contain much sensitive information like network connections, database connection URLs, username, password, and e.t.c.
+  *Synchronization and Concurrency. By developing classes as immutable, by default this nature makes them threadsafe. ...
+  *Class Loading. While class loading string is used as an argument. ...
+  *HashCode Caching. ...
+
+   ex:- class employee{
+         public int hashcode(){
+          return 1234;}
+         public static void main(String args[]){
+           Employee e = new Employee();
+           sop(e.hashcode())
+          } }
+
+5) Character constant is enclosed in single quotes. String constants are enclosed in double quotes.Character constants are single digit or 
+   character. String Constants are collection of characters.
+   
+ Character constant is enclosed in single quotes. String constants are enclosed in double quotes. Character
+ constants are single digit or character. String Constants are collection of characters.
+
+   Ex :’2’, ‘A’
+
+   Ex : “Hello World”
+
+String Constants are written by enclosing a set of characters within a pair of double quotes.	
+String Constants are assigned to variables of type String.
+
+
+6) An exception is an event which causes the program to be unable to flow in its intended execution.
+
+  There are three kinds of exceptions:
+  Checked Exception
+  Unchecked Exception
+  Error
+
+7)  1: Separating Error-Handling Code from "Regular" Code
+    2: Propagating Errors Up the Call Stack
+    3: Grouping and Differentiating Error Types
+
+8)YES
+
+9)The throw keyword in Java is used to explicitly throw an exception from a method or any block of code. We can throw either checked or unchecked 
+exception. The throw keyword is mainly used to throw custom exceptions. Syntax: throw Instance Example: throw new ArithmeticException ("/ by zero");
+
+10)No.
+
+11)Finally Block in Java | A “finally” is a keyword used to create a block of code that follows a try or catch block.
+
+A finally block contains all the crucial codes such as closing connections, stream, etc that is always executed whether an exception occurwithin 
+a try block or not.When finally block is attached with a try-catch block, it is always executed whether the catch block has handled the exception 
+thrown by try block or not.
+
+The syntax for try-finally and try-catch-finally is as follows:
+
+Syntax for try-finally block:
+
+try
+{
+  statement1;
+  statement2;
+}
+finally // finally block
+{
+  statement3;
+}
+
+12) In java, both Errors and Exceptions are the subclasses of java.lang.Throwable class. Error refers to an illegal operation performed by the user 
+   which results in the abnormal working of the program. Programming errors often remain undetected until the program is compiled or executed.
+
+13)It is a mechanisim in which one class acquire the property of another class is called IS-A relationship.
+   HAS-A relationship is also known as association,Association is a relationship between two seperate classes establishes through their object.
+   composition and aggregation are the two forms of association.
+
+14) *The main method in Java is public so that it's visible to every other class, even which are not part of its package. ...
+    *The main method is static in Java so that it can be called without creating any instance. ...
+    *The main method is void in Java because it doesn't return anything to the caller which is JVM.
+
+15)Yes
+
+16)Java does not support “directly” nested methods.,Many functional programming languages support method within method.,But you can achieve 
+nested method functionality in Java 7 or older version by define local classes, class within method so this does compile."
+
+17)No
+
+18)The object is an instance of a class and an object is a real-world entity. To access the members who are defined in the class you need to
+ create an object. for example, a chair, pen, table, bike, book,etc are the example of Object. Creating an Object As we know Class Provides 
+ the Blueprints for Objects. Thus, an object is created from a Class.
+
+19)In the Java programming language and environment, a just-in-time (JIT) compiler is a program that turns Java bytecode (a program that contains 
+  instructions that must be interpreted) into instructions that can be sent directly to the processor.
+
+20)
+
+21) In Java, we can create our own exceptions that are derived classes of the Exception class. Creating our own Exception is known as
+ custom exception or user-defined exception. Basically, Java custom exceptions are used to customize the exception according to user need. 
+ Consider the example 1 in which InvalidAgeException class extends the Exception class. Using the custom exception, we can have your own exception 
+ and message.
+
+Code sample
+class InvalidAgeException extends Exception{
+  InvalidAgeException(String s){
+    super(s);
+  }
+}
+
+22)Try-catch block is used to handle the exception. In a try block, we write the code which may throw an exception and in catch b
+lock we write code to handle that exception. Throw keyword is used to explicitly throw an exception.
+
+23)No.
+
+24)Creating an object of the String class using the new keyword by passing the string value as a parameter of its constructor.
+ Passing a character array to the String constructor.
+
+25)
+   1 .public class EvenOrOdd {
+	 
+	void checks(int n)
+	{
+		if(n%2 == 0)
+	      {
+		    System.out.println(n+"is a even");
+	      }
+		else
+		{
+			System.out.println(n+"is a odd");
+		}
+	}
+    }
+
+  2.  class TestReturn 
+ {
+    int  display()
+      {
+    	  return 10;
+      }
+public static void main(String[] args)
+{
+	TestReturn tr = new TestReturn();
+	
+	tr.display();
+	System.out.println(tr.display());
+	
+	
+	
+}
+	
+	
+}
+
+  3.
+import java.util.Scanner;
+
+public class Again {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		EvenOrOdd eo = new EvenOrOdd();
+		
+		for(int i=1; i<=4; i++)
+		{
+			System.out.println("Enter the number");
+			int num=sc.nextInt();
+			eo.checks(num);
+			System.out.println("-------------");
+		}
+	}
+
+}
+
+  4. class MethodDemo {
+	
+	void display()
+	{
+		System.out.println("Hello world!");
+	}
+public static void main(String[] args)
+    {
+	  System.out.println("Start");
+	
+	   MethodDemo md = new MethodDemo();
+	   md.display();
+	   
+	   System.out.println("End");
+	   
+	}
+
+}
