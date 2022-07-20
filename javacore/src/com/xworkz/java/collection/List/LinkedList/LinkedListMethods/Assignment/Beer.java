@@ -38,6 +38,6 @@ public String toString() {
 	return "Beer [taste=" + taste + ", price=" + price + ", color=" + color + "]";
 }
   
-  
+
 	
 }

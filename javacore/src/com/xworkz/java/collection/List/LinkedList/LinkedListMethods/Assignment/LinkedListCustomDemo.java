@@ -22,9 +22,9 @@ public class LinkedListCustomDemo {
 	 ll.add(beer);
 	 System.out.println(ll);
 	 
-	 for(Beer ll1:ll) {
-		 if(ll1.getPrice()==180) {
-			 System.out.println(ll1);
+	 for(Beer l1:ll) {
+		 if(l1.getPrice()==180) {
+			 System.out.println(l1);
 		 }
 		 
 	 }
