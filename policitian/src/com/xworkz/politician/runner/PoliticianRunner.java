@@ -1,5 +1,7 @@
 package com.xworkz.politician.runner;
 
+import java.util.List;
+
 import com.xworkz.policitian.dto.PoliticianDTO;
 import com.xworkz.politician.constants.PartyName;
 import com.xworkz.politician.constants.PartySymbol;
@@ -10,7 +12,7 @@ public class PoliticianRunner {
 	public static void main(String[] args) {
 		
 		
-		PoliticianDTO pdto = new PoliticianDTO(10,PartyName.BJP,"Nandesh",543.0D,PartySymbol.BJPSYMBOL,"Orange","mudhol","mudhol",90000000.00D);
+		PoliticianDTO pdto = new PoliticianDTO(10,PartyName.BJP,"Nandesh",543.0D,PartySymbol.AAPSYMBOL,"Orange","mudhol","mudhol",90000000.00D);
 
 		PoliticianDAO pdao = new PoliticianDAOImpl();
 		
@@ -31,22 +33,34 @@ public class PoliticianRunner {
 	PoliticianDTO pdto4 = pdao.findByIdAndName(5, "KJP"); 
 	System.out.println("findByIdAndName :"+pdto4);
 	
-	System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+	System.out.println("____________________________");
 	String pdto5 = pdao.findNamebyId(10);
 	System.out.println("findNamebyId :"+pdto5);
 	
-	System.out.println(": : :  : : : : : : : : :");
-	//String pdto6 = pdao.findPresidentByIdAndName(2, "BJP");
-//	System.out.println(pdto5);
+	System.out.println("---------------------------");
+	String pdto6 = pdao.findPresidentByIdAndName(2, "BJP");
+	System.out.println(pdto6);
 	
 	System.out.println("Get total ");
 	int pdto7 = pdao.getTotal();
-//	System.out.println(pdto7);
+	System.out.println(pdto7);
 	
 	System.out.println(" ^^^^^^^^^^^^^");
-	PoliticianDTO pdto8 =pdao.findPartyByMaxMembers();
+	String pdto8 =pdao.findPartyByMaxMembers();
 	System.out.println("findPartyByMaxMembers:"+pdto8);
 		
+	
+	List<PoliticianDTO> pdto9 = pdao.findAll();
+	System.out.println(pdto9);
+		
+		List<String> ls = pdao.findAllPartyName();
+		System.out.println(ls);
+		
+		List<Integer> li = pdao.findAllIds();
+		System.out.println(li);
+	
+		List<Object> lo = pdao.findAllTotalMembersAndPartyBudgetAndPartyName();
+	    System.out.println(lo);
 	}
 
 }

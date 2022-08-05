@@ -25,4 +25,5 @@ public class PoliticianDTO {
 	private String partyState;
 	private double budget;
 
+	
 }
