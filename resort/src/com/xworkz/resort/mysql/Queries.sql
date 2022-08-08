@@ -1,0 +1,1 @@
+SELECT * FROM resort.resort_info;
