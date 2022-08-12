@@ -9,10 +9,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
 @Table(name="resort_info")
+@NoArgsConstructor
 public class ResortEntity {
 	
 	@Id
@@ -22,8 +24,8 @@ public class ResortEntity {
 	private String name;
 	@Column(name="location")
 	private String location;
-	@Column(name="checkInTime")
-	private LocalTime checkInTime;
+	@Column(name="ChechInTime")
+	private LocalTime ChechInTime;
 	@Column(name="checkOutTime")
 	private LocalTime checkOutTime;
 	@Column(name="createBy")
