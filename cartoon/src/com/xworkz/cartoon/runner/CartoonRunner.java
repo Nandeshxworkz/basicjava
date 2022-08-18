@@ -53,6 +53,8 @@ public class CartoonRunner {
 //	     Integer inti=dao.total();
 //		System.out.println(inti);
 		
+	CartoonEntity cart =	dao.findByMaxCreatedDate();
+		System.out.println(cart);
 
 //		CartoonEntity r	=dao.findByNameAndCountryAndGenderAndAuthor("Jackie chahan", "USA", "male", "Jackie");
 //	    System.out.println(r);
@@ -67,7 +69,9 @@ public class CartoonRunner {
 //		System.out.println(obj[0]);
 //		System.out.println(obj[1]);
 		
-		dao.updateAuthorByName("Nandish C", "Jackie chahan");
+		//dao.updateAuthorByName("Sharat geeks", "Jackie chahan");
+        //  dao.updateTypeByName("UltraLegend", "Gohan");
+		//dao.deleteByName("Vegeta");
 	}
 
 }

@@ -25,13 +25,14 @@ import lombok.NoArgsConstructor;
 @NamedQueries({
 	//@NamedQuery(name="findByName",query="select cartoon from CartoonEntity cartoon where cartoon.name=:nme"),
 	//@NamedQuery(name="total",query="select count(*) from CartoonEntity "),
-	//@NamedQuery(name="findByMaxCreatedDate",query="select cartoon from CartoonEntity cartoon  where cartoon.createdDate =(select max(createdDate) from CartoonEntity cartoon")
+	@NamedQuery(name="findByMaxCreatedDate",query="select max(cartoon.createdDate) from CartoonEntity cartoon ")
 	//@NamedQuery(name="findAll",query="select cartoon from CartoonEntity cartoon where name=:nme and country=:cnt and gender=:gn and author=:at"),
 	//@NamedQuery(name="findAuthor",query="select cartoon.author from CartoonEntity cartoon where cartoon.name=:nme"),
    // @NamedQuery(name="findcreatedDate",query="select cartoon.createdDate from CartoonEntity cartoon where cartoon.author=:at"),
    // @NamedQuery(name="findnameAndcountry",query="select cartoon.name, cartoon.country from CartoonEntity cartoon where cartoon.author=:at"),
-    @NamedQuery(name="updateAuthor",query="update CartoonEntity cartoon set author=:at where cartoon.name=:nme")
-    
+   // @NamedQuery(name="updateAuthor",query="update CartoonEntity cartoon set cartoon.author=:at where cartoon.name=:nme"),
+    //  @NamedQuery(name="updateTypeByName",query="update CartoonEntity cartoon set cartoon.type=:ty where cartoon.name=:nmt")
+     //  @NamedQuery(name="deleteByName",query="delete from CartoonEntity cartoon where cartoon.name=:nms")
 })
 public class CartoonEntity extends ParentEntity {
 

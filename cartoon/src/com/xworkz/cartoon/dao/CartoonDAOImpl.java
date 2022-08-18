@@ -85,10 +85,7 @@ public class CartoonDAOImpl implements CartoonDAO {
 			manager = factory.createEntityManager();
 			Query query = manager.createNamedQuery("findByMaxCreatedDate");
 			Object obj = query.getSingleResult();
-			if (obj != null) {
-				CartoonEntity cartoon = (CartoonEntity) obj;
-				return cartoon;
-			}
+		    System.out.println("findByMaxCreatedDate :-"+obj);
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -200,9 +197,9 @@ public class CartoonDAOImpl implements CartoonDAO {
 			tx.begin();
 			Query query = manager.createNamedQuery("updateAuthor");
 			query.setParameter("nme", name);
+			query.setParameter("at", newAuthor);			
 			query.executeUpdate();
-			
-			//Object obj = query.getSingleResult();
+			tx.commit();
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -215,7 +212,24 @@ public class CartoonDAOImpl implements CartoonDAO {
 
 	@Override
 	public void updateTypeByName(String newType, String name) {
-		
+		EntityManager manager = null;
+		try {
+			manager = factory.createEntityManager();
+			EntityTransaction tx=manager.getTransaction();
+			tx.begin();
+			Query query = manager.createNamedQuery("updateTypeByName");
+			query.setParameter("ty", newType);
+			query.setParameter("nmt", name);
+						
+			query.executeUpdate();
+			tx.commit();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		} finally {
+			manager.close();
+		}
 
 	}
 
@@ -223,12 +237,18 @@ public class CartoonDAOImpl implements CartoonDAO {
 	public void deleteByName(String name) {
 		EntityManager manager = null;
 		try {
-			manager= factory.createEntityManager();
-			manager.createNamedQuery(name);
-			
-		}catch(Exception e) {
+			manager = factory.createEntityManager();
+			EntityTransaction tx=manager.getTransaction();
+			tx.begin();
+			Query query = manager.createNamedQuery("deleteByName");
+			query.setParameter("nms", name);
+			query.executeUpdate();
+			tx.commit();
+
+		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
+
+		} finally {
 			manager.close();
 		}
 
