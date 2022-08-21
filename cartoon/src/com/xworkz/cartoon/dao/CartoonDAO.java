@@ -1,6 +1,9 @@
 package com.xworkz.cartoon.dao;
 
+
 import java.time.LocalDate;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import com.xworkz.cartoon.entity.CartoonEntity;
@@ -28,4 +31,35 @@ public interface CartoonDAO {
 	void updateTypeByName(String newType,String name);
 	
 	void deleteByName(String name);
+	
+	default List<CartoonEntity> finAll(){
+		return Collections.emptyList();
+	}
+	
+	default List<CartoonEntity> findAllByAuthor(String author){
+		return Collections.emptyList();
+	}
+	
+	default List<CartoonEntity> findAllByAuthorAndGender(String author,String gender){
+		return Collections.emptyList();
+	}
+	default List<String> findAllName(){
+		return Collections.emptyList();
+	}
+	
+	default List<String> findAllCountry(){
+		return Collections.emptyList();		
+	}
+	
+	default List<Object[]> findAllNameAndCountry(){
+		return Collections.emptyList();
+	}
+	default List<Object[]> findAllNameAndCountryAndAuthor(){
+		return Collections.emptyList();
+				
+	}
+	
+	
+	
+	
 }

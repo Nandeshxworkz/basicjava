@@ -14,7 +14,7 @@ public class CartoonRunner {
 		CartoonEntity cEntity1 = new CartoonEntity("Doraa", "Japan", "male", "nagasaki", "kids", "Sharat",
 				LocalDate.of(2015, 12, 26), "Nandesh", LocalDate.of(2022, 06, 16));
 		CartoonEntity cEntity2 = new CartoonEntity("Goku", "Japan", "male", "akira", "kids", "Shadow",
-				LocalDate.of(2016, 12,11), "chandrya", LocalDate.of(2021, 01, 1));
+				LocalDate.of(2016, 12, 11), "chandrya", LocalDate.of(2021, 01, 1));
 		CartoonEntity cEntity3 = new CartoonEntity("Jackie chahan", "USA", "male", "Jackie", "legend", "Sameer",
 				LocalDate.of(2015, 11, 26), "kalyan", LocalDate.of(2022, 02, 16));
 		CartoonEntity cEntity4 = new CartoonEntity("patlu", "India", "male", "Harvinder", "forkids", "samarth",
@@ -29,12 +29,12 @@ public class CartoonRunner {
 				LocalDate.of(2015, 12, 26), "Nandesh", LocalDate.of(2022, 06, 16));
 		CartoonEntity cEntity9 = new CartoonEntity("Heidi", "India", "Female", "India", "kids", "nandish",
 				LocalDate.of(2019, 02, 02), "Nandesh", LocalDate.of(2022, 8, 16));
-		
 
 		CartoonDAO dao = new CartoonDAOImpl();
 
 		List<CartoonEntity> list = new ArrayList<CartoonEntity>();
-		list.add(cEntity1);
+		for (int i = 5000; i > 0; i--)
+			list.add(cEntity1);
 		list.add(cEntity2);
 		list.add(cEntity3);
 		list.add(cEntity4);
@@ -46,32 +46,53 @@ public class CartoonRunner {
 
 //		boolean save = dao.save(list);
 //		System.out.println("saved data :" + save);
-		
+//		}
+
+//		boolean save = dao.save(list);
+//		System.out.println("saved data :" + save);
+
 //		CartoonEntity entity1=dao.findByName("Motu");
 //		System.out.println(entity1);
-		
+
 //	     Integer inti=dao.total();
 //		System.out.println(inti);
-		
-	CartoonEntity cart =	dao.findByMaxCreatedDate();
-		System.out.println(cart);
+
+//	CartoonEntity cart =	dao.findByMaxCreatedDate();
+//		System.out.println(cart);
 
 //		CartoonEntity r	=dao.findByNameAndCountryAndGenderAndAuthor("Jackie chahan", "USA", "male", "Jackie");
 //	    System.out.println(r);
-		
+
 //		String str=dao.findAuthorByName("Heidi");
 //		System.out.println(str);
-		
+
 //		LocalDate ld = dao.findCreatedDateByAuthor("akira");
 //		System.out.println(ld);
-		
+
 //		Object[] obj = dao.findNameAndCountryByAuthor("Jackie");
 //		System.out.println(obj[0]);
 //		System.out.println(obj[1]);
-		
-		//dao.updateAuthorByName("Sharat geeks", "Jackie chahan");
-        //  dao.updateTypeByName("UltraLegend", "Gohan");
-		//dao.deleteByName("Vegeta");
+
+		// dao.updateAuthorByName("Sharat geeks", "Jackie chahan");
+		// dao.updateTypeByName("UltraLegend", "Gohan");
+		// dao.deleteByName("Vegeta");
+
+		// dao.finAll().forEach(System.out::println);
+
+		// dao.findAllByAuthor("nagasaki").forEach(System.out::println);
+
+		// dao.findAllByAuthorAndGender("India","Female").forEach(System.out::println);
+
+		// dao.findAllName().forEach(System.out::println);
+
+		// dao.findAllCountry().forEach(System.out::println);
+
+		// dao.findAllNameAndCountry().forEach(obj->
+		// System.out.println(obj[0]+"::"+obj[1]));
+
+		dao.findAllNameAndCountryAndAuthor()
+				.forEach(obj -> System.out.println(obj[0] + ":::" + obj[1] + ":::" + obj[2]));
+
 	}
 
 }
