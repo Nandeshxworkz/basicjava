@@ -47,7 +47,7 @@ public class CartoonEntity extends ParentEntity {
 
 	@Id
 	@GenericGenerator(name = "auto", strategy = "increment")
-	@GeneratedValue(generator = "auto")
+	@GeneratedValue(generator ="")
 	private int id;
 	private String name;
 	private String country;
